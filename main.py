@@ -46,7 +46,7 @@ def predict():
     'Antibiotic Types',
     ('Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
 
-
+CHOICES = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"}
 
 
     age = st.number_input("Age:")
