@@ -63,16 +63,16 @@ def predict():
 
 
 def main():
-    new_title = '<p style="font-size: 42px;">Welcome The Congenital Disabilities Prediction App!</p>'
+    new_title = '<p style="font-size: 42px;">Welcome To The IntelBioMax Prediction App!</p>'
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
     read_me = st.markdown("""
     The application is built using Streamlit  
-    to demonstrate Congenital Disabilities Prediction. It performs prediction on multiple parameters
+    to demonstrate Different Types of Antibiotic Effects Prediction. It performs prediction on multiple parameters
                                   """)
     st.sidebar.title("Select Activity")
     choice = st.sidebar.selectbox(
-        "MODE", ("About", "Predict Congenital Disabilities"))
-    if choice == "Predict Congenital Disabilities":
+        "MODE", ("About", "Predict Antibiotic Effects"))
+    if choice == "Predict Antibiotic Effects":
         read_me_0.empty()
         read_me.empty()
         predict()
