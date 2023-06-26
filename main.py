@@ -43,8 +43,8 @@ def predict():
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
     dpf = st.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone'))
+    'Aminoglycosides',
+    ('Macrolides', 'Tetracyclines', 'Lincomycins'))
 
 
 
