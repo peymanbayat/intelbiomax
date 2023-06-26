@@ -23,9 +23,9 @@ def predict():
     st.markdown('We will be very greatful if you share your data in this regard with us.')
 
     name = st.text_input("DNA Sequence:")
-    pregnancy = st.number_input("No. of times pregnant:")
-    st.markdown('Pregnancies: Number of times pregnant')
-
+    pregnancy = st.number_input("Please connect the device to your computer, Data Reading from the Devics:")
+    st.markdown('Number of time periods consideration in the plot (read from device)')
+    
     glucose = st.number_input("Plasma Glucose Concentration :")
     st.markdown('Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test')
 
@@ -42,8 +42,8 @@ def predict():
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
-    dpf = st.number_input("Please connect the device to your computer, Data Reading from the Devics:")
-    st.markdown('Number of time periods consideration in the plot (read from device)')
+    dpf = st.number_input("No. of times pregnant:")
+    st.markdown('Pregnancies: Number of times pregnant')
 
 
     age = st.number_input("Age:")
