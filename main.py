@@ -47,8 +47,7 @@ def predict():
     ('Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
 
 CHOICES = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"}
-def format_func(option):
-    return CHOICES[option]
+
 
     age = st.number_input("Age:")
     st.markdown('Age: Age (years)')
@@ -82,7 +81,8 @@ def main():
         predict()
     elif choice == "About":
         print()
-
+def format_func(option):
+    return CHOICES[option]
 
 if __name__ == '__main__':
     main()
