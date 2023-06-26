@@ -42,7 +42,14 @@ def predict():
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
-    dpf = st.number_input("No. of times using this antibiotic:")
+    dpf = st.number_input("No. of times using this antibiotic: (1:Penicillins, 
+2: Tetracyclines,
+3: Cephalosporins,
+4: Quinolones,
+5: Lincomycins,
+6: Macrolides,
+7: Sulfonamides,
+8: Glycopeptides)")
     st.markdown('Antibiotic Type')
 
 
