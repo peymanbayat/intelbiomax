@@ -45,7 +45,8 @@ def predict():
     dpf = st.selectbox(
     'Antibiotic Types',
     ('Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
-
+def format_func(option):
+    return CHOICES[option]
 CHOICES = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"}
 
 
@@ -81,8 +82,7 @@ def main():
         predict()
     elif choice == "About":
         print()
-def format_func(option):
-    return CHOICES[option]
+
 
 if __name__ == '__main__':
     main()
