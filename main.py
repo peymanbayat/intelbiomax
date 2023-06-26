@@ -44,10 +44,8 @@ def predict():
 
     dpf = st.selectbox(
     'Antibiotic Types',
-    ('Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
-def format_func(option):
-    return CHOICES[option]
-CHOICES = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"}
+    ({1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"}'Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
+
 
 
     age = st.number_input("Age:")
