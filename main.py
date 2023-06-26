@@ -15,16 +15,19 @@ pickle_in = open('Diabetes.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 def predict():
-    st.sidebar.header('Diabetes Prediction')
+    st.sidebar.header('IntelBioMax Co.')
     # select = st.sidebar.selectbox('Select Form', ['Form 1'], key='1')
     # if not st.sidebar.checkbox("Hide", True, key='2'):
-    st.title('Diabetes Prediction(Only for Females Above 21 Years of Age)')
-    st.markdown('This trained dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.')
-    st.markdown('Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.')
+    st.title('IntelBioMax (Suitable Type of Antibiotic Prediction)')
+    st.markdown('This trained dataset is originally collected by IntelBioMax Company.')
+    st.markdown('We will be very greatful if you share your data in this regard with us.')
 
-    name = st.text_input("Name:")
-    pregnancy = st.number_input("No. of times pregnant:")
-    st.markdown('Pregnancies: Number of times pregnant')
+    name = st.text_input("Ptient's Name (Optional)")
+
+    
+    dpf = st.number_input("Please connect the device to your computer, Data Reading from the Devics:")
+    st.markdown('Number of time periods consideration in the plot (read from device)')
+   
 
     glucose = st.number_input("Plasma Glucose Concentration :")
     st.markdown('Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test')
@@ -42,9 +45,6 @@ def predict():
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
-    dpf = st.number_input("Diabetes Pedigree Function:")
-    st.markdown('DiabetesPedigreeFunction: Diabetes pedigree function')
-
 
     age = st.number_input("Age:")
     st.markdown('Age: Age (years)')
@@ -57,23 +57,22 @@ def predict():
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
         if prediction == 0:
-            st.write('Congratulation!',name,'You are not diabetic')
+            st.write('Congratulation!', name,'It seems you are not a risky case')
         else:
-            st.write(name,", we are really sorry to say but it seems like you are Diabetic. But don't lose hope, we have suggestions for you:")
-            st.markdown('[Visit Here](https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639#:~:text=Diabetes%20prevention%3A%205%20tips%20for%20taking%20control%201,Skip%20fad%20diets%20and%20make%20healthier%20choices%20)')
+            st.write(name,", It seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
 
 
 def main():
-    new_title = '<p style="font-size: 42px;">Welcome The Diabetes Prediction App!</p>'
+    new_title = '<p style="font-size: 42px;">Welcome The Congenital Disabilities Prediction App!</p>'
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
     read_me = st.markdown("""
     The application is built using Streamlit  
-    to demonstrate Diabetes Prediction. It performs prediction on multiple parameters
-    [here](https://github.com/).""")
+    to demonstrate Congenital Disabilities Prediction. It performs prediction on multiple parameters
+                                  """)
     st.sidebar.title("Select Activity")
     choice = st.sidebar.selectbox(
-        "MODE", ("About", "Predict Diabetes"))
-    if choice == "Predict Diabetes":
+        "MODE", ("About", "Predict Congenital Disabilities"))
+    if choice == "Predict Congenital Disabilities":
         read_me_0.empty()
         read_me.empty()
         predict()
@@ -83,3 +82,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
