@@ -22,7 +22,7 @@ def predict():
     st.markdown('This trained dataset is originally collected by IntelBioMax Company.')
     st.markdown('We will be very greatful if you share your data in this regard with us.')
 
-name = st.text_input("DNA Sequence:")
+    name = st.text_input("DNA Sequence:")
     pregnancy = st.number_input("No. of times pregnant:")
     st.markdown('Pregnancies: Number of times pregnant')
 
