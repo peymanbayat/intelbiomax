@@ -57,9 +57,9 @@ def predict():
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
         if prediction == 0:
-            st.write('Congratulation!', name,'It seems you are not a risky case')
+            st.write('Congratulation!', name,'It seems you have selected a fit type of Antibiotic')
         else:
-            st.write(name,", It seems you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
+            st.write(name,", It seems you can choose a more fitted Antibiotic")
 
 
 def main():
@@ -67,12 +67,12 @@ def main():
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
     read_me = st.markdown("""
     The application is built using Streamlit  
-    to demonstrate Congenital Disabilities Prediction. It performs prediction on multiple parameters
+    to demonstrate Fit Type of Antibiotic Prediction. It performs prediction on multiple parameters
                                   """)
     st.sidebar.title("Select Activity")
     choice = st.sidebar.selectbox(
-        "MODE", ("About", "Predict Congenital Disabilities"))
-    if choice == "Predict Congenital Disabilities":
+        "MODE", ("About", "Predict Antibiotic Type Effects"))
+    if choice == "Predict Antibiotic Type Effects":
         read_me_0.empty()
         read_me.empty()
         predict()
