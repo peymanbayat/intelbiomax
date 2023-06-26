@@ -42,8 +42,8 @@ def predict():
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
-    dpf = st.number_input("No. of times pregnant:")
-    st.markdown('Pregnancies: Number of times pregnant')
+    dpf = st.number_input("No. of times using this antibiotic:")
+    st.markdown('Antibiotic Type')
 
 
     age = st.number_input("Age:")
