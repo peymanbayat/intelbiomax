@@ -23,11 +23,9 @@ def predict():
     st.markdown('We will be very greatful if you share your data in this regard with us.')
 
     name = st.text_input("Patient's Name (Optional)")
-
     
     dpf = st.number_input("Please connect the device to your computer, Data Reading from the Devics:")
     st.markdown('Number of time periods consideration in the plot (read from device)')
-   
 
     glucose = st.number_input("Plasma Glucose Concentration :")
     st.markdown('Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test')
@@ -41,25 +39,21 @@ def predict():
     insulin = st.number_input("2-Hour serum insulin (mu U/ml):")
     st.markdown('Insulin: 2-Hour serum insulin (mu U/ml)')
 
-
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
-
 
     age = st.number_input("Age:")
     st.markdown('Age: Age (years)')
 
-
     submit = st.button('Predict')
     st.markdown('Outcome: Class variable (0 or 1)')
-
 
     if submit:
         prediction = classifier.predict([[dpf, glucose, bp, skin, insulin, bmi, age]])
         if prediction == 0:
-            st.write('Congratulation!', name,'It seems you are not a risky case')
+            st.write('Congratulation!', name,'It seems you select a fit Antibiotic')
         else:
-            st.write(name,", It seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
+            st.write(name,", It a good type of Antibiotic has not selected")
 
 
 def main():
