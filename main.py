@@ -55,7 +55,7 @@ def predict():
 
 
     if submit:
-        prediction = classifier.predict([[dpf, glucose, bp, skin, insulin, bmi, pregnancy, age]])
+        prediction = classifier.predict([[dpf, glucose, bp, skin, insulin, bmi, age]])
         if prediction == 0:
             st.write('Congratulation!', name,'It seems you are not a risky case')
         else:
