@@ -22,7 +22,7 @@ def predict():
     st.markdown('This trained dataset is originally collected by IntelBioMax Company.')
     st.markdown('We will be very greatful if you share your data in this regard with us.')
 
-    name = st.text_input("Ptient's Name (Optional)")
+    name = st.text_input("Patient's Name (Optional)")
 
     
     dpf = st.number_input("Please connect the device to your computer, Data Reading from the Devics:")
@@ -55,7 +55,7 @@ def predict():
 
 
     if submit:
-        prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
+        prediction = classifier.predict([[dpf, glucose, bp, skin, insulin, bmi, pregnancy, age]])
         if prediction == 0:
             st.write('Congratulation!', name,'It seems you are not a risky case')
         else:
