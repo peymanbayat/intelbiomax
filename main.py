@@ -43,8 +43,8 @@ def predict():
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
     dpf = st.selectbox(
-    'Aminoglycosides',
-    ('Macrolides', 'Tetracyclines', 'Lincomycins'))
+    'Antibiotic Types',
+    ('Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
 
 
 
