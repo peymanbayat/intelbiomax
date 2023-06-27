@@ -44,7 +44,12 @@ def predict():
 
     dpf = st.selectbox(
     'Antibiotic Types',
-    ({1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"})
+    ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
+    st.write('You selected:', dpf)
+
+   
+
+        
 
     age = st.number_input("Age:")
     st.markdown('Age: Age (years)')
