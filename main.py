@@ -46,15 +46,11 @@ def predict():
     'Antibiotic Types',
     ({1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4:"Lincomycins"}'Aminoglycosides','Macrolides', 'Tetracyclines', 'Lincomycins'))
 
-
-
     age = st.number_input("Age:")
     st.markdown('Age: Age (years)')
 
-
     submit = st.button('Predict')
     st.markdown('Outcome: Class variable (0 or 1)')
-
 
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
@@ -62,7 +58,6 @@ def predict():
             st.write('Congratulation!', name,'It seems you have selected a fit type of Antibiotic')
         else:
             st.write(name,", It seems you can choose a more fitted Antibiotic")
-
 
 def main():
     new_title = '<p style="font-size: 42px;">Welcome The Congenital Disabilities Prediction App!</p>'
