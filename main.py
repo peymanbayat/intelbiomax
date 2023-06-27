@@ -43,10 +43,10 @@ def predict():
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
     CHOICES = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4: "Lincomycins"}
-    def format_func(dpf):
+     def format_func(dpf):
       return CHOICES[dpf]
 
-      dpf = st.selectbox("Select option", dpf=list(CHOICES.keys()), format_func=format_func)
+    dpf = st.selectbox("Select option", dpf=list(CHOICES.keys()), format_func=format_func)
     st.write(f"You selected option {dpf} called {format_func(dpf)}")
     
    
