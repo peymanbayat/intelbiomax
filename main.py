@@ -53,11 +53,7 @@ def format_func(dpf):
 dpf = st.selectbox("Select option", options=list(dpf.keys()), format_func=format_func)
 st.write(f"You selected option {option} called {format_func(option)}")
    
-    dpf = st.selectbox(
-    'Antibiotic Types',
-    ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
-    st.write('You selected:', dpf)
-
+   
     
         
 
