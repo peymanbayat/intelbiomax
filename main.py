@@ -51,13 +51,13 @@ def predict():
     ('1: "Penicillins"', '2: "Cephalosporins"', '3: "Tetracyclines"', '4:"Aminoglycosides"'))
     st.write('You selected:', dpf)
 
-    if dpf == '1: "Aminoglycosides"':
+    if dpf == '1: "Penicillins"':
         dpf = 1
-    if dpf == '2: "Macrolidesb"':
+    if dpf == '2: "Cephalosporins"':
         dpf = 2
     if dpf == '3: "Tetracyclines"':
         dpf = 3
-    if dpf == '4:"Lincomycins"':
+    if dpf == '4: "Aminoglycosides"':
         dpf =4
     
 
