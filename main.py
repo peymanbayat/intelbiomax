@@ -48,7 +48,7 @@ def predict():
    
     dpf = st.selectbox(
     'Antibiotic Types',
-    ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
+    ('1: "Penicillins"', '2: "Cephalosporins"', '3: "Tetracyclines"', '4:"Aminoglycosides"'))
     st.write('You selected:', dpf)
 
     if dpf == '1: "Aminoglycosides"':
