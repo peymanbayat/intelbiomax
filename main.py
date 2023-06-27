@@ -45,9 +45,8 @@ def predict():
     
     options = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4: "Lincomycins"}
 
-
-def format_func(dpf):
-    return options[dpf]
+    def format_func(dpf):
+     return options[dpf]
 
 
     dpf = st.selectbox("Select option", options=list(dpf.keys()), format_func=format_func)
