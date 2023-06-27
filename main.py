@@ -46,8 +46,8 @@ def predict():
     def format_func(dpf):
       return CHOICES[dpf]
 
-    dpf = st.selectbox("Select option", dpf=list(CHOICES.keys()), format_func=format_func)
-    st.write(f"You selected option {dpf} called {format_func(dpf)}")
+      dpf = st.selectbox("Select option", dpf=list(CHOICES.keys()), format_func=format_func)
+      st.write(f"You selected option {dpf} called {format_func(dpf)}")
     
    
    
