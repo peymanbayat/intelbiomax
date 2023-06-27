@@ -53,6 +53,13 @@ def predict():
 
     if dpf == '1: "Aminoglycosides"':
         dpf = 1
+    if dpf == '2: "Macrolidesb"':
+        dpf = 2
+    if dpf == '3: "Tetracyclines"':
+        dpf = 3
+    if dpf == '4:"Lincomycins"':
+        dpf =4
+    
 
         
 
