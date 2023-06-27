@@ -43,22 +43,22 @@ def predict():
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
     
-    
+    options = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4: "Lincomycins"}
+
+
+def format_func(dpf):
+    return options[dpf]
+
+
+dpf = st.selectbox("Select option", options=list(dpf.keys()), format_func=format_func)
+st.write(f"You selected option {option} called {format_func(option)}")
    
     dpf = st.selectbox(
     'Antibiotic Types',
     ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
     st.write('You selected:', dpf)
-    if dpf == '1: "Aminoglycosides"' 
-        dpf = 1
-    if dpf == '2: "Macrolidesb"'
-        dpf = 2
-    if dpf == '3: "Tetracyclines"'
-        dpf = 3
-    if dpf == '4:"Lincomycins"'
-        dpf = 4
 
-
+    
         
 
     age = st.number_input("Age:")
