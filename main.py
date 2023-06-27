@@ -46,11 +46,13 @@ def predict():
     def format_func(dpf):
       return CHOICES[dpf]
 
-    dpf = st.selectbox("Select option", dpf=list(CHOICES.keys()), format_func=format_func)
-    st.write(f"You selected option {dpf} called {format_func(dpf)}")
     
    
-   
+    dpf = st.selectbox(
+    'Antibiotic Types',
+    ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
+    st.write('You selected:', dpf)
+    
 
         
 
