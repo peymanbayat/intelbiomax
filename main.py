@@ -51,7 +51,9 @@ def predict():
     ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
     st.write('You selected:', dpf)
 
-    
+    if dpf == 1: "Aminoglycosides":
+        dpf = 1
+
         
 
     age = st.number_input("Age:")
