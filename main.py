@@ -42,17 +42,22 @@ def predict():
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
-    dpf = {1: "Aminoglycosides", 2: "Macrolidesb", 3: "Tetracyclines", 4: "Lincomycins"}
-    def format_func(dpf):
-      return dpf
-
+    
     
    
     dpf = st.selectbox(
     'Antibiotic Types',
     ('1: "Aminoglycosides"', '2: "Macrolidesb"', '3: "Tetracyclines"', '4:"Lincomycins"'))
     st.write('You selected:', dpf)
-    
+    if dpf == '1: "Aminoglycosides"' 
+        dpf = 1
+    if dpf == '2: "Macrolidesb"'
+        dpf = 2
+    if dpf == '3: "Tetracyclines"'
+        dpf = 3
+    if dpf == '4:"Lincomycins"'
+        dpf = 4
+
 
         
 
