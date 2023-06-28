@@ -20,7 +20,7 @@ def predict():
     # if not st.sidebar.checkbox("Hide", True, key='2'):
     st.title('IntelBioMax (Suitable Type of Antibiotic Prediction)')
     st.markdown('This trained dataset is originally collected by IntelBioMax Company.')
-    st.markdown('We will be very greatful if you share your data in this regard with us.')
+    st.markdown('It will be very greatful if you share your data in this regard with us.')
 
     name = st.text_input("Patient's Name (Optional)")
     pregnancy = st.number_input("Please connect the device to your computer, Data Reading from the Devics:")
