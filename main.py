@@ -80,7 +80,7 @@ def main():
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
     read_me = st.markdown("""
     The application is built using Streamlit  
-    It performs prediction on multiple parameters
+    To demonstrate a fit type of Antibiotic prediction. It performs prediction on multiple parameters
                                   """)
     st.sidebar.title("Select Activity")
     choice = st.sidebar.selectbox(
