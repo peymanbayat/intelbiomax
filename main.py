@@ -13,7 +13,6 @@ import pickle
 
 pickle_in = open('Diabetes.pkl', 'rb')
 classifier = pickle.load(pickle_in)
-
 def predict():
     st.sidebar.header('IntelBioMax Co.')
     # select = st.sidebar.selectbox('Select Form', ['Form 1'], key='1')
