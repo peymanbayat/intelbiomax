@@ -76,7 +76,7 @@ def predict():
             st.write(name,", It seems you can choose a more fitted Antibiotic")
 
 def main():
-    new_title = '<p style="font-size: 42px;">Welcome The Safe Food Detector App!</p>'
+    new_title = '<p style="font-size: 42px;">Welcome The IntelBiomax Prediction App!</p>'
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
     read_me = st.markdown("""
     The application is built using Streamlit  
